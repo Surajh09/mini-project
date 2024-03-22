@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MAIN_MINI</string>
+    <string name="student_monitoring_system">Student Monitoring System</string>
+    <string name="password">Password</string>
+</resources>
