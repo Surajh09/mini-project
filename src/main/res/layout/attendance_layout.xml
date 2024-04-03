@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/attendance_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Attendance Title -->
+        <TextView
+            android:id="@+id/attendance_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Attendance"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- White line separator -->
+        <View
+            android:id="@+id/separator_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF" /> <!-- White color -->
+
+        <!-- Current Semester -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/current_semester_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Semester"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <!-- Placeholder TextView for displaying attendance data -->
+            <TextView
+                android:id="@+id/attendance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendance Value"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Space after last section -->
+    <View
+        android:id="@+id/spacing_view"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/current_semester_text"
+        android:background="@android:color/transparent" />
+
+    <!-- Go back button -->
+    <Button
+        android:id="@+id/go_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

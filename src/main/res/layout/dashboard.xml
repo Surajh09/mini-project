@@ -1,102 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dashboard_background">
+    android:background="@drawable/dashboard_background"
+    android:alpha="0.7"
+    tools:context=".MainActivity">
 
-    <!-- Welcome Container -->
-    <LinearLayout
-        android:id="@+id/welcome_container"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/welcome_container_background"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/text_student_name"
+        <!-- Main content layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to,\nStudent Monitoring System"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"/>
+
+            <ImageButton
+                android:id="@+id/open_drawer_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/threeline"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/open_drawer_button_description"/>
+
+        </RelativeLayout>
+
+        <!-- Navigation View -->
+        <com.google.android.material.navigation.NavigationView
+            app:headerLayout="@layout/nav_header"
+            app:itemTextColor="@color/cardview_dark_background"
+            android:contextClickable="true"
+            android:id="@+id/nav_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome, John Doe!"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:layout_gravity="start"/>
 
-        <TextView
-            android:id="@+id/text_roll_no_branch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Roll No: 123 | Branch: Computer Science"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <!-- Attendance Container -->
-    <LinearLayout
-        android:id="@+id/attendance_container"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/attendance_container_background"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintBottom_toTopOf="@id/performance_container"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/welcome_container">
-
-        <TextView
-            android:id="@+id/text_attendance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Attendance"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- Add your attendance graph or other relevant views here -->
-    </LinearLayout>
-
-    <!-- Performance Container -->
-    <LinearLayout
-        android:id="@+id/performance_container"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/performance_container_background"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/welcome_container">
-
-        <TextView
-            android:id="@+id/text_performance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Performance"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/text_cgpa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CGPA: 7.01"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <!-- Guideline to separate attendance and performance containers -->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

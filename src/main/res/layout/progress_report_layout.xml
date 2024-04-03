@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progress_report_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/dashboard_bg">
+
+    <!-- Progress Report Title -->
+    <TextView
+        android:id="@+id/progress_report_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Progress Report"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+    <!-- White line separator -->
+    <View
+        android:id="@+id/separator_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/progress_report_title"
+        android:background="#FFFFFF" /> <!-- White color -->
+
+    <!-- Progress -->
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress: "
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/progress_report_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Sem progress: "
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <!-- Current Semester Marks -->
+    <LinearLayout
+        android:id="@+id/current_sem_marks_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/current_sem_marks_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Sem Marks: "
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/current_sem_marks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value of Marks"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- Current Semester Year -->
+    <LinearLayout
+        android:id="@+id/current_sem_year_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_sem_marks_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/current_sem_year_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Sem Year: "
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/current_sem_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value of Year"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- Current Semester Attendance -->
+    <LinearLayout
+        android:id="@+id/current_sem_attendance_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_sem_year_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/current_sem_attendance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Sem Attendance: "
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/current_sem_attendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value of Attendance"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- Space after last section -->
+    <View
+        android:id="@+id/spacing_view"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/current_sem_attendance_layout"
+        android:background="@android:color/transparent" />
+
+    <!-- Go back button -->
+    <Button
+        android:id="@+id/go_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>
