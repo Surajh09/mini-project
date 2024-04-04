@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">MAIN_MINI</string>
-    <string name="student_monitoring_system">Student Monitoring System</string>
-    <string name="password">Password</string>
+    <string name="app_name">miniproject11</string>
+
+    <string name="open">Open</string>
+
+    <string name="close">Close</string>
+
+    <string name="open_drawer_button_description">Open Drawer</string>
+
 </resources>

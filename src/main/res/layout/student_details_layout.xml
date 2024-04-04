@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/student_details_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard_bg">
+
+    <!-- Student Details Title -->
+    <TextView
+        android:id="@+id/student_details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Student Details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000" /> <!-- Black color -->
+
+    <!-- White line separator -->
+    <View
+        android:id="@+id/separator_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/student_details_title"
+        android:background="#FFFFFF" /> <!-- White color -->
+
+    <!-- Name Section -->
+    <LinearLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/separator_line"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp"> <!-- Adjusted margin -->
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textSize="18sp"
+            android:textColor="#000000" /> <!-- Black color -->
+
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student_Name"
+            android:textSize="18sp"
+            android:textColor="#000000" /> <!-- Black color -->
+    </LinearLayout>
+
+    <!-- Branch Section -->
+    <LinearLayout
+        android:id="@+id/branch_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/name_layout"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/branch_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Branch: "
+            android:textSize="18sp"
+            android:textColor="#000000" /> <!-- Black color -->
+
+        <TextView
+            android:id="@+id/student_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student_Branch"
+            android:textSize="18sp"
+            android:textColor="#000000" /> <!-- Black color -->
+    </LinearLayout>
+
+    <!-- Year Section -->
+    <LinearLayout
+        android:id="@+id/year_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/branch_layout"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/year_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year: "
+            android:textSize="18sp"
+            android:textColor="#000000" /> <!-- Black color -->
+
+        <TextView
+            android:id="@+id/student_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student_Year"
+            android:textSize="18sp"
+            android:textColor="#000000" /> <!-- Black color -->
+    </LinearLayout>
+
+    <!-- Go back button -->
+    <Button
+        android:id="@+id/go_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Go Back"
+        android:textColor="#000000" /> <!-- Black color -->
+
+</RelativeLayout>

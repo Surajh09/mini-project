@@ -1,9 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
-    <style name="Base.Theme.MAIN_MINI" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Miniproject11" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.MAIN_MINI" parent="Base.Theme.MAIN_MINI" />
+    <!-- Define the color -->
+    <color name="navigation_drawer_text_color">#FF0000</color> <!-- Change to your desired color -->
+
+    <!-- AppTheme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Your other style attributes here -->
+
+        <!-- Apply text color to navigation drawer menu items -->
+        <item name="android:textColorPrimary">@color/navigation_drawer_text_color</item>
+    </style>
+
+    <!-- NavigationDrawerTextStyle -->
+    <style name="NavigationDrawerTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/navigation_drawer_text_color</item>
+    </style>
+
+    <!-- Theme.Miniproject11 -->
+    <style name="Theme.Miniproject11" parent="Base.Theme.Miniproject11" />
+
 </resources>
